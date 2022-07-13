@@ -31,10 +31,10 @@ Re-initialize a git repository:
 git init
 ```
 
-Use the GitHub CLI to create a new project repository on GitHub:
+Use the GitHub CLI to create a new public project repository on GitHub and add a remote named origin for this repo:
 
 ```bash
-gh repo create <name-of-your-app-here>-back-end --public
+gh repo create <name-of-your-app-here>-back-end --public --source=. --remote=origin
 ```
 
 Run npm i to fetch the template's dependencies:
@@ -54,9 +54,10 @@ Fill it with the following:
 ```
 DATABASE_URL=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+CLOUDINARY_URL=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-Replace the `DATABASE_URL` and `SECRET` with values that you provide.
+Replace the `DATABASE_URL`, `SECRET`, and `CLOUDINARY_URL` with values that you provide.
 
 > 🚨 Place secrets in this `.env` file. The contents of this file WILL NOT be exposed to site visitors.
 
